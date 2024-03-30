@@ -190,6 +190,8 @@ Routing tables define the routes that certain web traffic takes within your devi
 
 But that is the gist of it, and these are just a couple of ways you can use Python to facilitate the networking aspect of DevOps.
 
+See https://colab.research.google.com/github/robert0714/Packt-Hands-On-Python-for-DevOps-2024/blob/main/Chapter3/Networking.ipynb  
+
 ## Summary
 In this chapter, you learned a thing or two about the hands-on part of this book. You’ve learned about APIs and computer networks, which practically means you’re halfway there as far as the Python DevOps implementation goes.
 
