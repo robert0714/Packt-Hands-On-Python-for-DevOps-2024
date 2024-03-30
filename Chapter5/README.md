@@ -65,23 +65,6 @@ Now, you may be wondering why such a test would be necessary given the fact that
 
 This method of testing is commonly referred to as the **A/B testing method**.
 
-server_response(server, request)
-What this code does is pick out the country header, which you will need to define yourself (which is good, because you can customize it), and then direct the web request to the appropriate server. A small layer in between the request and response can work wonders for connectivity. You can see an illustration of this in the subsequent figure:
-
-Figure 5.1 – Function to facilitate location mapping for servers
-Figure 5.1 – Function to facilitate location mapping for servers
-
-Now that we have learned how to redirect users to custom locations, let’s look at how to redirect features toward a custom set of users.
-
-Testing features on a subset of users
-When an application needs to implement a new feature and the application team wants that feature to be tested in a live environment, the need arises for some sort of mechanism that sorts a small subset of users into a group that will receive that new feature. The analytical data acquired from this group will then be used to judge the feature and its effectiveness based on certain criteria. The reverse – removal of a feature – works this way as well. If you recall when YouTube removed the numbers from their dislike button, some users still had their numbers for weeks because of their cached website versions. Even after that, browser extensions came out that extracted the dislike number from the YouTube API itself for whichever video you were watching (that is, until YouTube took it out of their API entirely).
-
-Now, you may be wondering why such a test would be necessary given the fact that the feature had probably been tested over and over again, even before it had been launched. Well, here’s the thing:
-
-It might not have been: You’ll be surprised how many companies are willing to put a new thing out there for a small subset to use without going through user acceptance testing. You’ll be even more surprised to learn that this isn’t a bad strategy sometimes (but if you are going to do this, I suggest you do it with the example I’m going to give you in the upcoming code block).
-Users break stuff: It is the nature of users to break stuff in ways that testers cannot comprehend. You cannot fully understand human nature and the chaos behind it and any invention you make must be tested against it. Having a more controlled approach requires throwing your work to a subsample of chaos and hoping that it can endure.
-This method of testing is commonly referred to as the A/B testing method.
-
 Now that that’s out of the way, we can get to the implementation. This implementation is very similar to that of the implementation for the edge locations and involves a proxy very much in that vein.
 
 We’re going to subset our users in two ways: randomly and based on some criteria. First, let’s look at the code for the random distribution of user requests (20% to one server and 80% to the other server):
